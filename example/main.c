@@ -8,7 +8,7 @@ tag_UartBaudControl Uart0Baud;
 
 void main( void )
 {
-  AvrUartBaudControlInit(&Uart0Baud, __CPU_CLK__, &UBRR0L, &UBRR0H);
+  AvrUartBaudControlInit(&Uart0Baud, __CPU_CLK__, (char *) &UBRR0L, (char *) &UBRR0H);
   //init uart0 baudrate.
   
   while(1)

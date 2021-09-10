@@ -6,55 +6,77 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\main.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.r90</file>
-      <file>$PROJ_DIR$\Debug\Exe\AvrUartBaud.d90</file>
-      <file>$PROJ_DIR$\Debug\Obj\AvrUartBaud.pbd</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\comp_a90.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\inavr.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\AvrUartBaud.r90</file>
-      <file>$PROJ_DIR$\..\AvrUartBaud.h</file>
-      <file>$TOOLKIT_DIR$\inc\iom64.h</file>
-      <file>$TOOLKIT_DIR$\inc\iomacro.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\AvrUartBaud(AT64).d90</file>
-      <file>$TOOLKIT_DIR$\inc\ina90.h</file>
-      <file>$TOOLKIT_DIR$\config\lnkm64s.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\bitdefinitions\iom64.inc</file>
+      <file>$PROJ_DIR$\Debug\Obj\AvrUartBaud.pbi</file>
       <file>$TOOLKIT_DIR$\lib\clib\cl3s-ec_mul-sf.r90</file>
       <file>$PROJ_DIR$\..\AvrUartBaud.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\AvrUartBaud.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\bitdefinitions\iom64.inc</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r90</file>
+      <file>$TOOLKIT_DIR$\inc\inavr.h</file>
+      <file>$PROJ_DIR$\..\AvrUartBaud.h</file>
+      <file>$TOOLKIT_DIR$\inc\iom64.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\iomacro.h</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\AvrUartBaud.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\AvrUartBaud.r90</file>
+      <file>$TOOLKIT_DIR$\inc\comp_a90.h</file>
+      <file>$TOOLKIT_DIR$\config\lnkm64s.xcl</file>
+      <file>$PROJ_DIR$\Debug\Exe\AvrUartBaud(AT64).d90</file>
+      <file>$TOOLKIT_DIR$\inc\ina90.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
+          <file> 15</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\AvrUartBaud.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>ICCAVR</name>
           <file> 12</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+        <tool>
+          <name>ICCAVR</name>
+          <file> 6</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\main.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 4</file>
+          <file> 17</file>
         </tool>
         <tool>
           <name>ICCAVR</name>
-          <file> 1</file>
+          <file> 4</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 10 11 18 13 7 6 5</file>
+          <file> 7 9 0 16 5 8 13 6</file>
         </tool>
         <tool>
           <name>ICCAVR</name>
-          <file> 10 11 18 13 7 6 5 9</file>
+          <file> 7 9 0 16 5 8 13 6</file>
         </tool>
       </inputs>
     </file>
@@ -63,7 +85,7 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 17 4</file>
+          <file> 1 17</file>
         </tool>
       </inputs>
     </file>
@@ -72,30 +94,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 14 8 1 15</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\AvrUartBaud.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 17</file>
-        </tool>
-        <tool>
-          <name>ICCAVR</name>
-          <file> 8</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 9</file>
-        </tool>
-        <tool>
-          <name>ICCAVR</name>
-          <file> 9</file>
+          <file> 14 12 4 2</file>
         </tool>
       </inputs>
     </file>
@@ -106,64 +105,49 @@
   <configuration>
     <name>Release</name>
     <outputs>
-      <file>$PROJ_DIR$\main.c</file>
-      <file>$PROJ_DIR$\Release\Obj\AvrUartBaud.r90</file>
-      <file>$PROJ_DIR$\Release\Obj\AvrUartBaud.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\bitdefinitions\iom64.inc</file>
       <file>$PROJ_DIR$\Release\Exe\AvrUartBaud(AT64).hex</file>
-      <file>$TOOLKIT_DIR$\inc\comp_a90.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\Release\Obj\AvrUartBaud.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\AvrUartBaud.pbd</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl3s-ec_mul-sf.r90</file>
+      <file>$PROJ_DIR$\Release\Obj\AvrUartBaud.r90</file>
+      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\main.r90</file>
+      <file>$PROJ_DIR$\..\AvrUartBaud.c</file>
       <file>$TOOLKIT_DIR$\inc\inavr.h</file>
       <file>$PROJ_DIR$\..\AvrUartBaud.h</file>
       <file>$TOOLKIT_DIR$\inc\iom64.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
       <file>$TOOLKIT_DIR$\inc\iomacro.h</file>
-      <file>$TOOLKIT_DIR$\inc\ina90.h</file>
-      <file>$PROJ_DIR$\Release\Obj\main.r90</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$TOOLKIT_DIR$\inc\comp_a90.h</file>
       <file>$TOOLKIT_DIR$\config\lnkm64s.xcl</file>
-      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl3s-ec_mul-sf.r90</file>
-      <file>$PROJ_DIR$\..\AvrUartBaud.c</file>
-      <file>$PROJ_DIR$\Release\Obj\AvrUartBaud.pbd</file>
-      <file>$TOOLKIT_DIR$\inc\bitdefinitions\iom64.inc</file>
-      <file>$PROJ_DIR$\Release\Exe\AvrUartBaud.hex</file>
+      <file>$TOOLKIT_DIR$\inc\ina90.h</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 3</file>
+          <file> 1</file>
         </tool>
       </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 13</file>
-        </tool>
-        <tool>
-          <name>ICCAVR</name>
-          <file> 11</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 8 9 17 10 6 5 4</file>
-        </tool>
-        <tool>
-          <name>ICCAVR</name>
-          <file> 8 9 17 10 6 5 4 7</file>
-        </tool>
-      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\Release\Exe\AvrUartBaud(AT64).hex</name>
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 12 1 11 14</file>
+          <file> 16 5 7 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Release\Obj\AvrUartBaud.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 2 6</file>
         </tool>
       </inputs>
     </file>
@@ -176,26 +160,40 @@
         </tool>
         <tool>
           <name>ICCAVR</name>
-          <file> 1</file>
+          <file> 5</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 7</file>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>ICCAVR</name>
+          <file> 10</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
         </tool>
         <tool>
           <name>ICCAVR</name>
           <file> 7</file>
         </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Release\Obj\AvrUartBaud.pbd</name>
+      </outputs>
       <inputs>
         <tool>
-          <name>BILINK</name>
-          <file> 2 13</file>
+          <name>BICOMP</name>
+          <file> 11 13 0 17 9 12 15 10</file>
+        </tool>
+        <tool>
+          <name>ICCAVR</name>
+          <file> 11 13 0 17 9 12 15 10</file>
         </tool>
       </inputs>
     </file>
