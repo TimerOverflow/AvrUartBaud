@@ -6,7 +6,7 @@
 /*********************************************************************************/
 #include "AvrUartBaud.h"
 /*********************************************************************************/
-#if(AVR_UART_BAUD_REVISION_DATE != 20161108)
+#if(AVR_UART_BAUD_REVISION_DATE != 20170601)
 #error wrong include file. (AvrUartBaud.h)
 #endif
 /*********************************************************************************/
@@ -14,7 +14,7 @@
 
 
 /*********************************************************************************/
-char AvrUartBaudControlInit(tag_UartBaudControl *BaudCtrl, long CpuClock, unsigned char volatile __tiny *pUBRRL, unsigned char volatile __tiny *pUBRRH)
+char AvrUartBaudControlInit(tag_UartBaudControl *BaudCtrl, long CpuClock, char *pUBRRL, char *pUBRRH)
 {
 	/*
 		1) Parameter

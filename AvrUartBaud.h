@@ -7,15 +7,18 @@
 #ifndef __AVR_UART_BAUD_H__
 #define	__AVR_UART_BAUD_H__
 /*********************************************************************************/
-#define AVR_UART_BAUD_REVISION_DATE		20161108
+#define AVR_UART_BAUD_REVISION_DATE		20170601
 /*********************************************************************************/
 /** REVISION HISTORY **/
 /*
+	2017. 06. 01.					- AvrUartBaudControlInit() 함수의 인수 pUBRRL, pUBRRH 타입을 아래와 같이 변경.
+	Jeong Hyun Gu						'unsigned char volatile __tiny *' -> 'char *'
+
 	2016. 11. 08.					- revision valid check 추가.
-	Jung Hyun Gu
+	Jeong Hyun Gu
 
 	2016. 10. 28.					- 초기버전.
-	Jung Hyun Gu
+	Jeong Hyun Gu
 */
 /*********************************************************************************/
 /**Define**/
@@ -50,8 +53,8 @@ typedef struct
 
 	}Bit;
 
-	unsigned char volatile __tiny *pUBRRL;					//
-	unsigned char volatile __tiny *pUBRRH;					//
+	char *pUBRRL;
+	char *pUBRRH;
 
 	long CpuClock;																	//CPU클록
 	Enum_BaudRate Baud;															//
@@ -60,7 +63,7 @@ typedef struct
 /*********************************************************************************/
 /**Function**/
 
-char AvrUartBaudControlInit(tag_UartBaudControl *BaudCtrl, long CpuClock, unsigned char volatile __tiny *pUBRRL, unsigned char volatile __tiny *pUBRRH);
+char AvrUartBaudControlInit(tag_UartBaudControl *BaudCtrl, long CpuClock, char *pUBRRL, char *pUBRRH);
 void AvrUartBaudChange(tag_UartBaudControl *BaudCtrl, Enum_BaudRate Baud);
 
 /*********************************************************************************/
