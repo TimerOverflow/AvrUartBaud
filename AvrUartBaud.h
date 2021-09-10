@@ -1,18 +1,21 @@
 /*********************************************************************************/
 /*
- * Author : Jung Hyun Gu
+ * Author : Jeong Hyun Gu
  * File name : AvrUartBaud.h
 */
 /*********************************************************************************/
 #ifndef __AVR_UART_BAUD_H__
 #define	__AVR_UART_BAUD_H__
 /*********************************************************************************/
+#define AVR_UART_BAUD_REVISION_DATE		20161108
+/*********************************************************************************/
 /** REVISION HISTORY **/
 /*
+	2016. 11. 08.					- revision valid check 추가.
+	Jung Hyun Gu
+
 	2016. 10. 28.					- 초기버전.
 	Jung Hyun Gu
-	
-	
 */
 /*********************************************************************************/
 /**Define**/
@@ -44,12 +47,12 @@ typedef struct
 	struct
 	{
 		unsigned char Init		:		1;									//초기화
-		
+
 	}Bit;
-	
+
 	unsigned char volatile __tiny *pUBRRL;					//
 	unsigned char volatile __tiny *pUBRRH;					//
-	
+
 	long CpuClock;																	//CPU클록
 	Enum_BaudRate Baud;															//
 }tag_UartBaudControl;
@@ -62,14 +65,3 @@ void AvrUartBaudChange(tag_UartBaudControl *BaudCtrl, Enum_BaudRate Baud);
 
 /*********************************************************************************/
 #endif //__AVR_UART_BAUD_H__
-
-
-
-
-
-
-
-
-
-
-
