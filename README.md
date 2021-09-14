@@ -4,7 +4,7 @@ baudrate setting library for AVR
 - various baudrate support (9600 / 19200 / 38400 / 57600 / 115200)
 - automatic calculate baudrate optimized cpu clock 11.0592Mhz, 14.7456Mhz
 
-# AvrUartBaud
+# Relate Project
 - [AvrUart](https://github.com/TimerOverflow/AvrUart)
 - [AvrModbus](https://github.com/TimerOverflow/AvrModbus)
 
